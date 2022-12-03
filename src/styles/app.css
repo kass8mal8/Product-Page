@@ -1,0 +1,28 @@
+@font-face {
+  font-family: kumbh sans-bold;
+  src: url(../font/KumbhSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: kumbh sans-regular;
+  src: url(../font/KumbhSans-Medium.ttf);
+}
+.app {
+  width: 90%;
+  margin-left: 15px;
+  font-family: kumbh sans-regular;
+}
+.app li {
+  display: inline-flex;
+  list-style: none;
+}
+
+button {
+  font-family: kumbh sans-regular;
+}
+
+@media screen and (min-width: 800px) {
+  .app {
+    width: 80%;
+    margin-left: 100px;
+  }
+}/*# sourceMappingURL=app.css.map */

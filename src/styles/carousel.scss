@@ -1,0 +1,15 @@
+.carousel{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.carousel img{
+    width: 100%;
+}
+
+@media screen and (min-width:800px) {
+    .carousel-container ul{
+        display: none;
+    }
+}
