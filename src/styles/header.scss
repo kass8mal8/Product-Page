@@ -1,0 +1,81 @@
+@import './variables';
+
+.header{
+    margin: 30px auto;
+    .menu{
+        position: absolute;
+        left: 20px;
+        top: 35px;
+        margin-right: 30px;
+    }
+
+    .cart-count{
+        font-size: x-small;
+        display: none;
+        position: absolute;
+        right: 75px;
+        margin-top: -7px;
+        z-index: 2;
+        padding: 5px;
+        border-radius: 30px;
+        background-color: $orange;
+        height: 7px;
+        color: $white;
+        text-align: center;
+        
+        p{
+            margin-top: -3px;
+        }
+    }
+
+    ul{
+        li{
+            &:nth-of-type(4){
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            &:nth-of-type(3){
+                position: absolute;
+                right: 80px;
+                top: 30px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    .menu{
+        display: none;
+    }
+
+    .header{
+        margin-bottom: 50px;
+        border-bottom: 1px solid $grayish-blue;
+        padding-bottom: 30px;
+        ul{
+            li{
+                &:nth-of-type(2){
+                    margin-left: -35px;
+                    margin-top: 25px;
+                }
+
+                &:nth-of-type(4){
+                    right: 0px;
+                }
+    
+                &:nth-of-type(3){
+                    right: 60px;
+                }
+            }
+        }
+
+        .cart-count{
+            right: 55px;
+            margin-top: 22px;
+            
+        }
+    }
+}

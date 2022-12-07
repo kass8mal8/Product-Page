@@ -1,0 +1,59 @@
+@import './variables';
+
+.side-nav{
+    position: absolute;
+    top: 13px;
+    left: 130px;
+    color: $dark-grayish-blue;
+
+    ul{
+        li{
+            margin: auto 20px;
+
+            &:nth-of-type(1){
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .overlay{
+        position: absolute;
+        top: 0px;
+        left: -400px;
+        background: $black;
+        z-index: 5;
+        width: 100vw;
+        height: 160vh;
+        transition: .3s ease;
+    }
+
+    .overlay.active{
+        left: 0px;
+        transition: .3s ease;
+    }
+
+    .side-nav{
+        display: block;
+        z-index: 10;
+        top:0px;
+        background: $white;
+        width: 50%;
+        height: 155vh;
+        padding: 5px;
+        padding-top: 15px;
+        left: 0px;
+
+
+        ul li{
+            margin: 20px 0px;
+            display: block;
+
+            &:nth-of-type(1){
+                margin-bottom: 40px;
+                display: block;
+            }
+        }
+    }
+}

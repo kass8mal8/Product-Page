@@ -22,7 +22,8 @@ button {
 
 @media screen and (min-width: 800px) {
   .app {
-    width: 80%;
-    margin-left: 100px;
+    width: 85%;
+    margin-left: 90px;
+    position: relative;
   }
 }/*# sourceMappingURL=app.css.map */

@@ -2,16 +2,32 @@ import SideNav from './SideNav'
 import menu from '../images/icon-menu.svg'
 import cart from '../images/icon-cart.svg'
 import avatar from '../images/image-avatar.png'
+import logo from "../images/logo.svg"
+import '../styles/header.css'
 
-const Header = () => {
+const Header = ({count}) => {
+
+    const handleToggle = () => {
+        document.querySelector('.overlay').classList.toggle('active')
+    }
+
     return ( 
         <div>
-            <ul>
-                <li> <img src={menu} alt="menu-icon" /> </li>
-                <li> <h2>sneakers</h2> </li>
-                <li> <img src={cart} alt="icon-cart" /> </li>
-                <li> <img src={avatar} alt="avatar" /> </li>
-            </ul>
+            <div className="header">
+                <ul>
+                    <div className='cart-count'> <p>{count}</p> </div>
+                    <li> 
+                        <img 
+                            src={menu} 
+                            alt="menu-icon" 
+                            className='menu'
+                            onClick={handleToggle} />
+                    </li>
+                    <li> <img src={logo} alt="logo" /> </li>
+                    <li> <img src={cart} alt="icon-cart" /> </li>
+                    <li> <img src={avatar} alt="avatar" width="40"/> </li>
+                </ul>
+            </div>
             <SideNav />
         </div>
      );

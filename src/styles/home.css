@@ -69,21 +69,50 @@
   border: 1px solid hsl(26deg, 100%, 55%);
   border-radius: 3px;
   padding: 10px;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 800px) {
   .home-wrapper {
     display: grid;
+    position: relative;
     grid-template-columns: 50% 50%;
-    gap: 40px;
-    margin-left: 50px;
+    gap: 100px;
+    width: 85%;
+    margin-left: 30px;
+    margin-bottom: 40px;
   }
-  .pricing {
-    left: 52%;
+  .home-wrapper .home {
+    margin-top: 30px;
   }
-  .pricing li:nth-of-type(3) {
+  .home-wrapper .home h1 {
+    font-size: 40px;
+  }
+  .home-wrapper .home .pricing {
+    left: 57%;
+  }
+  .home-wrapper .home .pricing li:nth-of-type(3) {
     position: inherit;
     margin-top: 30px;
+  }
+  .home-wrapper .home .pricing li:nth-of-type(2) {
+    margin-left: 10px;
+  }
+  .home-wrapper .home .qty-order {
+    width: 97%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 50% 50%;
+  }
+  .home-wrapper .home .qty-order li:nth-of-type(3) {
+    right: 52%;
+    margin-top: 5px;
+  }
+  .home-wrapper .home .qty-order button {
+    margin-bottom: 0px;
+  }
+  .home-wrapper .home .qty-order button:hover {
+    opacity: 0.7;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=home.css.map */

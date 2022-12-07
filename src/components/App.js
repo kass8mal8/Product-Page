@@ -5,13 +5,17 @@ import { useState } from "react";
 
 const App = () => {
   const [count, setCount] = useState(0)
+  const showCartItems = () => {
+    document.querySelector('.cart-count').style.display = 'block'
+  }
 
   return (
     <div className="app">
-       <Header />
-       <Home 
-          count = {count}
-          setCount = {setCount}/>
+      <Header count = {count} />
+      <Home 
+        count = {count}
+        setCount = {setCount}
+        showCartItems = {showCartItems}/>
     </div>
   );
 }

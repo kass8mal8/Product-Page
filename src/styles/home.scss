@@ -25,32 +25,36 @@
     li{
         margin-right: 20px;
         font-size: 15px;
+
+        &:nth-of-type(1){
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: -3px;
+        }
+
+        &:nth-of-type(2){
+            color: $orange;
+            background-color: $pale-orange;
+            padding: 2px;
+            border-radius: 5px;
+            margin-right: 70%;
+        }
+
+        &:nth-of-type(3){
+            color: $grayish-blue;
+            text-decoration: line-through;
+        }
+    
     }
 
-    li:nth-of-type(1){
-        font-size: 22px;
-        font-weight: bold;
-        margin-top: -3px;
-    }
-
-    li:nth-of-type(2){
-        color: $orange;
-        background-color: $pale-orange;
-        padding: 2px;
-        border-radius: 5px;
-        margin-right: 70%;
-    }
-
-    li:nth-of-type(3){
-        color: $grayish-blue;
-        text-decoration: line-through;
-    }
+    
 }
 .qty-order{
     position: relative;
     margin-top: 100px;
     text-align:center;
     width:100%;
+    
 
     ul {
         li{
@@ -84,7 +88,7 @@
         border: 1px solid $orange;
         border-radius: 3px;
         padding: 10px;
-        cursor: pointer;
+        margin-bottom: 20px;
     }
 }
 
@@ -93,16 +97,57 @@
 @media screen and (min-width:800px){
     .home-wrapper{
         display: grid;
+        position: relative;
         grid-template-columns: 50% 50%;
-        gap: 40px;
-        margin-left: 50px;
-    }
-    .pricing{
-        left: 52%;
+        gap: 100px;
+        width: 85%;
+        margin-left: 30px;
+        margin-bottom: 40px;
 
-        li:nth-of-type(3){
-            position: inherit;
+        .home{
             margin-top: 30px;
+
+            h1{
+                font-size: 40px;
+            }
+            .pricing{
+                left: 57%;
+        
+                li{
+                    &:nth-of-type(3){
+                        position: inherit;
+                        margin-top: 30px;
+                    }
+        
+                    &:nth-of-type(2){
+                        margin-left: 10px;
+                    }
+                }
+        
+            }
+    
+            .qty-order{
+                width: 97%;
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 50% 50%;
+
+                li:nth-of-type(3){
+                    right: 52%;
+                    margin-top: 5px;
+                }
+                button{
+                    margin-bottom: 0px;
+
+                    &:hover{
+                        opacity: .7;
+                        cursor: pointer;
+                    }
+                }
+            }
+
         }
     }
+    
+    
 }
