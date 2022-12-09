@@ -9,9 +9,14 @@ const App = () => {
     document.querySelector('.cart-count').style.display = 'block'
   }
 
+  const handleCart = (txt) => {
+    alert(txt)
+  }
+
   return (
     <div className="app">
-      <Header count = {count} />
+      <Header 
+        count = {count} />
       <Home 
         count = {count}
         setCount = {setCount}

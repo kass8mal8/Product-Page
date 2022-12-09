@@ -10,7 +10,7 @@ const SideNav = () => {
 
     return ( 
         <div className="overlay">
-            <div className="side-nav">
+            <div className="side-nav" >
                 <ul>
                     <li>
                         <img 

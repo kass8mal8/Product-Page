@@ -12,7 +12,10 @@
 
 .home{
     
-    h3{ color: $orange }
+    h4{ 
+        color: $orange;
+        font-size:14px;
+     }
     h2{ color: $Very-dark-blue }
     p{ color: $dark-grayish-blue }
 
@@ -55,6 +58,12 @@
     text-align:center;
     width:100%;
     
+    .cart-icon{
+        position: absolute;
+        width: 20px;
+        margin-left: -30px;
+        margin-top: -1px;
+    }
 
     ul {
         li{
@@ -86,9 +95,10 @@
         background-color: $orange;
         color: white;
         border: 1px solid $orange;
-        border-radius: 3px;
-        padding: 10px;
+        border-radius: 6px;
+        padding: 15px;
         margin-bottom: 20px;
+        box-shadow:0px, 5px, 0px, $pale-orange;
     }
 }
 
@@ -105,7 +115,7 @@
         margin-bottom: 40px;
 
         .home{
-            margin-top: 30px;
+            margin-top: 40px;
 
             h1{
                 font-size: 40px;
@@ -131,6 +141,7 @@
                 display: grid;
                 gap: 10px;
                 grid-template-columns: 50% 50%;
+                padding-top: 40px;
 
                 li:nth-of-type(3){
                     right: 52%;
@@ -138,6 +149,8 @@
                 }
                 button{
                     margin-bottom: 0px;
+                    border-radius: 10px;
+                    padding: 10px;
 
                     &:hover{
                         opacity: .7;

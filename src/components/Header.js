@@ -5,7 +5,7 @@ import avatar from '../images/image-avatar.png'
 import logo from "../images/logo.svg"
 import '../styles/header.css'
 
-const Header = ({count}) => {
+const Header = ({count, handleCart}) => {
 
     const handleToggle = () => {
         document.querySelector('.overlay').classList.toggle('active')
@@ -24,7 +24,7 @@ const Header = ({count}) => {
                             onClick={handleToggle} />
                     </li>
                     <li> <img src={logo} alt="logo" /> </li>
-                    <li> <img src={cart} alt="icon-cart" /> </li>
+                    <li> <img src={cart} alt="icon-cart" onClick={handleCart} /> </li>
                     <li> <img src={avatar} alt="avatar" width="40"/> </li>
                 </ul>
             </div>

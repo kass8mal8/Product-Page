@@ -2,6 +2,7 @@ import ImageCarousel from "./ImageCarousel";
 import '../styles/home.css'
 import minus from '../images/icon-minus.svg'
 import plus from '../images/icon-plus.svg'
+import cart from '../images/icon-cart.svg'
 
 
 const Home = ({count, setCount, showCartItems}) => {
@@ -13,7 +14,7 @@ const Home = ({count, setCount, showCartItems}) => {
             <ImageCarousel />
             <div className="home">
                 <aside>
-                    <h3>SNEAKER COMPANY</h3>
+                    <h4>SNEAKER COMPANY</h4>
                     <h1>Fall Limited Edition Sneakers</h1>
                     <p>
                         These low-profile sneakers are your perfect casual wear companion. Featuring a 
@@ -43,7 +44,9 @@ const Home = ({count, setCount, showCartItems}) => {
                     </ul>
                     <button 
                         disabled={count === 0 && 'disabled'} 
-                        onClick={showCartItems}>Add to cart</button>
+                        onClick={showCartItems}>
+                        <img src= {cart} alt = "cart-icon" className="cart-icon"/> Add to cart
+                    </button>
                 </div>
             </div>
         </div>

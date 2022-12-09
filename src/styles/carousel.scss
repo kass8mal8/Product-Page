@@ -58,7 +58,15 @@
             display: none;
         }
         .thumbnail{
-            display: block;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            gap: 5px;
+            margin-top: 20px;
+            
+            img{
+                width: 90%;
+                border-radius: 10px;
+            }
         }
         .main-img{
             border-radius: 10px;
