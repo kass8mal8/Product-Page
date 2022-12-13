@@ -9,7 +9,7 @@ import th4 from '../images/product-4-thumbnail.jpg'
 
 /* Thumbnail images*/
 
-const Thumbnail = () => {
+const Thumbnail = ({handleIndex}) => {
     // thumbnail images
     const thumbnail = [
         {src:th1, id:1, alt:'image-one'},
@@ -21,8 +21,11 @@ const Thumbnail = () => {
     return ( 
         <div className="carousel-container">
             <div className='thumbnail'>
-                {thumbnail.map( image => (
-                    <img src={image.src} alt={image.alt} />
+                {thumbnail.map( (image, index) => (
+                    <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        onClick={() => handleIndex(index)}/>
                 ))}
             </div>
         </div>

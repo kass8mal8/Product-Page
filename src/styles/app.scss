@@ -15,6 +15,12 @@
   margin-left: 15px;
   font-family:kumbh sans-regular;
 
+  @include responsive(tablet){
+    width: 85%;
+    margin-left: 90px;
+    position: relative;
+  }
+
   li{
     display: inline-flex;
     list-style: none;
@@ -23,12 +29,4 @@
 
 button{
   font-family: kumbh sans-regular;
-}
-
-@media screen and (min-width:800px) {
-  .app{
-    width: 85%;
-    margin-left: 90px;
-    position: relative;
-  }
 }

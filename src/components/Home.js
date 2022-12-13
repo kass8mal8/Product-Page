@@ -13,9 +13,14 @@ const Home = ({count, setCount, showCartItems}) => {
     const handleModal = () => {
         document.querySelector('.modal-overlay').classList.toggle('active')
     }
+    const handleIndex = (idx) => {
+        return idx
+    }
     return ( 
         <div className="home-wrapper">
-            <Carousel handleModal = {handleModal}/>
+            <Carousel 
+                handleModal = {handleModal}
+                handleIndex = {handleIndex}/>
             <div className="home">
                 <aside>
                     <h4>SNEAKER COMPANY</h4>
@@ -53,7 +58,7 @@ const Home = ({count, setCount, showCartItems}) => {
                     </button>
                 </div>
             </div>
-            <Thumbnail />
+            <Thumbnail handleIndex={handleIndex}/>
 
             <div className='modal'>
                 <Modal handleModal = {handleModal} />

@@ -11,6 +11,13 @@
   margin-left: 15px;
   font-family: kumbh sans-regular;
 }
+@media screen and (min-width: 800px) {
+  .app {
+    width: 85%;
+    margin-left: 90px;
+    position: relative;
+  }
+}
 .app li {
   display: inline-flex;
   list-style: none;
@@ -18,12 +25,4 @@
 
 button {
   font-family: kumbh sans-regular;
-}
-
-@media screen and (min-width: 800px) {
-  .app {
-    width: 85%;
-    margin-left: 90px;
-    position: relative;
-  }
 }/*# sourceMappingURL=app.css.map */
