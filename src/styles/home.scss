@@ -8,6 +8,10 @@
 
 .home-wrapper{
     width: 100%;
+
+    .modal{
+        display: none;
+    }
 }
 
 .home{
@@ -62,7 +66,7 @@
         position: absolute;
         width: 20px;
         margin-left: -30px;
-        margin-top: -1px;
+        margin-top: 2px;
     }
 
     ul {
@@ -113,6 +117,10 @@
         width: 85%;
         margin-left: 30px;
         margin-bottom: 40px;
+
+        .modal{
+            display: block;
+        }
 
         .home{
             margin-top: 40px;

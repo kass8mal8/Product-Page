@@ -11,3 +11,15 @@ $white:hsl(0, 0%, 100%);
 
 //lightbox background
 $black:hsla(0, 0%, 0%, .7);
+
+
+@mixin responsive($viewport){
+    @if($viewport == tablet){
+        @media screen and (min-width:800px) {@content}
+    };
+
+    @if($viewport == phone){
+        @media screen and (max-width:500px) {@content}
+    };
+
+}

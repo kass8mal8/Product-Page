@@ -2,7 +2,7 @@
   width: 117%;
   margin-left: -24px;
   opacity: 0;
-  transition: 0.3s ease-in;
+  transition: 0.1s ease-in;
 }
 .slide img {
   width: 100%;
@@ -10,45 +10,41 @@
 
 .slide.active {
   opacity: 1;
-  transition: 0.3s ease-in;
+  transition: 0.1s ease-in;
 }
 
 .carousel-container {
   position: relative;
 }
-.carousel-container ul {
-  position: absolute;
-  top: 50%;
-}
-.carousel-container ul li {
+.carousel-container li {
   background: white;
+  position: absolute;
   padding-block: 5px;
   padding-inline: 7px;
   border-radius: 50%;
-  width: 15px;
+  width: 13px;
+  top: 45%;
   z-index: 2;
 }
-.carousel-container ul li:nth-of-type(1) {
-  position: absolute;
-  left: 0px;
+.carousel-container .left {
+  left: -10px;
 }
-.carousel-container ul li:nth-of-type(2) {
-  position: absolute;
-  margin-left: 260px;
+.carousel-container .right {
+  right: -10px;
 }
 .carousel-container .thumbnail {
   display: none;
 }
 
 @media screen and (min-width: 800px) {
-  .carousel-container ul {
+  .carousel-container li {
     display: none;
   }
   .carousel-container .thumbnail {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     gap: 5px;
-    margin-top: 20px;
+    margin-top: -90px;
   }
   .carousel-container .thumbnail img {
     width: 90%;

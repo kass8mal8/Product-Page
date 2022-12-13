@@ -1,17 +1,21 @@
-import ImageCarousel from "./ImageCarousel";
 import '../styles/home.css'
 import minus from '../images/icon-minus.svg'
 import plus from '../images/icon-plus.svg'
-import cart from '../images/icon-cart.svg'
+import Carousel from "./Carousel";
+import Thumbnail from './Thumbnail';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faCartShopping} from "@fortawesome/free-solid-svg-icons"
+import Modal from './Modal';
 
 
 const Home = ({count, setCount, showCartItems}) => {
 
-    
-
+    const handleModal = () => {
+        document.querySelector('.modal-overlay').classList.toggle('active')
+    }
     return ( 
         <div className="home-wrapper">
-            <ImageCarousel />
+            <Carousel handleModal = {handleModal}/>
             <div className="home">
                 <aside>
                     <h4>SNEAKER COMPANY</h4>
@@ -45,9 +49,14 @@ const Home = ({count, setCount, showCartItems}) => {
                     <button 
                         disabled={count === 0 && 'disabled'} 
                         onClick={showCartItems}>
-                        <img src= {cart} alt = "cart-icon" className="cart-icon"/> Add to cart
+                        <FontAwesomeIcon icon= {faCartShopping} className="cart-icon"/> Add to cart
                     </button>
                 </div>
+            </div>
+            <Thumbnail />
+
+            <div className='modal'>
+                <Modal handleModal = {handleModal} />
             </div>
         </div>
      );

@@ -1,6 +1,9 @@
 .home-wrapper {
   width: 100%;
 }
+.home-wrapper .modal {
+  display: none;
+}
 
 .home h4 {
   color: hsl(26deg, 100%, 55%);
@@ -51,7 +54,7 @@
   position: absolute;
   width: 20px;
   margin-left: -30px;
-  margin-top: -1px;
+  margin-top: 2px;
 }
 .qty-order ul li {
   display: inline-flex;
@@ -89,6 +92,9 @@
     width: 85%;
     margin-left: 30px;
     margin-bottom: 40px;
+  }
+  .home-wrapper .modal {
+    display: block;
   }
   .home-wrapper .home {
     margin-top: 40px;

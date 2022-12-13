@@ -5,13 +5,12 @@ import { useState } from "react";
 
 const App = () => {
   const [count, setCount] = useState(0)
+
   const showCartItems = () => {
     document.querySelector('.cart-count').style.display = 'block'
   }
 
-  const handleCart = (txt) => {
-    alert(txt)
-  }
+
 
   return (
     <div className="app">
