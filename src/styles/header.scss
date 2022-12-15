@@ -2,6 +2,7 @@
 
 .header{
     margin: 30px auto;
+    
     .menu{
         position: absolute;
         left: 20px;
@@ -22,6 +23,11 @@
         height: 7px;
         color: $white;
         text-align: center;
+
+        @include responsive(tablet){
+            right: 55px;
+            margin-top: 22px;
+        }
         
         p{
             margin-top: -3px;
@@ -72,12 +78,6 @@
                     right: 60px;
                 }
             }
-        }
-
-        .cart-count{
-            right: 55px;
-            margin-top: 22px;
-            
         }
     }
 }

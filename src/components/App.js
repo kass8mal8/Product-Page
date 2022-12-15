@@ -14,12 +14,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header 
-        count = {count} />
-      <Home 
-        count = {count}
-        setCount = {setCount}
-        showCartItems = {showCartItems}/>
+        <header>
+          <Header 
+            count = {count} />
+        </header>
+        <Home 
+          count = {count}
+          setCount = {setCount}
+          showCartItems = {showCartItems}/>
     </div>
   );
 }

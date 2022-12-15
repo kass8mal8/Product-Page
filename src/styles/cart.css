@@ -18,7 +18,7 @@
     top: 100px;
     left: auto;
     width: 400px;
-    box-shadow: 2px 5px 4px hsl(219deg, 9%, 45%);
+    box-shadow: 0px 5px 10px 2px hsl(220deg, 14%, 75%);
   }
 }
 .cart-container .product-img {
