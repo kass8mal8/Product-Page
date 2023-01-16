@@ -2,8 +2,8 @@
 
 
 .modal-overlay{
-    position:absolute;
-    top: -177px; left: -130px;
+    position:fixed;
+    top:0px; left: 0px;
     background: $black;
     width:94.5vw; height:120vh;
     padding: 30px;

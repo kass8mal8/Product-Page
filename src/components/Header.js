@@ -17,7 +17,7 @@ const Header = ({count}) => {
     }
 
     return ( 
-        <div>
+        <div className='header-nav'>
             <div className="header">
                 <ul>
                     <div className='cart-count'> <p>{count}</p> </div>
