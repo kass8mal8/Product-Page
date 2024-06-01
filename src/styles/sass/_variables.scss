@@ -1,0 +1,35 @@
+// Primary colors
+$orange: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+
+// Neutral colors
+$very-darkblue: hsl(220, 13%, 13%);
+$dark-grayishblue: hsl(219, 9%, 45%);
+$grayishblue: hsl(220, 14%, 75%);
+$light-grayishblue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%); // with 75% opacity for lightbox background
+
+// Font
+
+@font-face {
+    font-family: kumbhsansMedium;
+    src: url(../../font/KumbhSans-Medium.ttf);
+}
+
+$kumbhsans: kumbhsansMedium;
+
+@mixin responsive($breakpoint) {
+    @if($breakpoint == 'mobile') {
+        @media screen and (max-width: 425px) {
+            @content
+        }
+    };
+
+    @if($breakpoint == 'desktop') {
+        @media screen and (min-width: 426px) {
+            @content
+        }
+    };
+
+}
