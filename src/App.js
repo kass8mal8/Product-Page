@@ -1,11 +1,12 @@
-import { Box, createTheme, ThemeProvider } from "@mui/material";
+import { Box, createTheme, Modal, ThemeProvider } from "@mui/material";
 import "./styles/css/index.css";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import Carousel from "./components/Carousel";
 import { createContext, useState } from "react";
+import Thumbnail from "./components/Thumbnail";
 
-export const CountContext = createContext({})
+export const ProductContext = createContext({})
 
 const App = () => {
     const theme = createTheme({
@@ -13,21 +14,27 @@ const App = () => {
             fontFamily: 'kumbhsansMedium'
         }
     });
-    const [count, setCount] = useState({});
+    const [count, setCount] = useState(0);
+    const [image, setImage] = useState(null);
+    const [isClicked, setIsClicked] = useState(false);
 
     return (  
-        <CountContext.Provider value={count}>
+        <ProductContext.Provider value={{count, setCount, image, setImage, isClicked, setIsClicked}}>
             <ThemeProvider theme={theme}>
                 <Box className='container'>
                     <Navbar />
 
                     <Box className="main">
                         <Carousel />
+                        <Thumbnail />
+                        <Modal>
+                            <Thumbnail />
+                        </Modal>
                         <Content />
                     </Box>
                 </Box>
             </ThemeProvider>
-        </CountContext.Provider>
+        </ProductContext.Provider>
     );
 }
  
