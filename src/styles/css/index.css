@@ -28,12 +28,15 @@ body {
   .container .navbar .topright {
     margin-left: 60px;
   }
+  .container .navbar .topright .avatar {
+    margin-left: 70px;
+  }
   .container .navbar .badge {
-    margin-right: -55px;
+    margin-right: -47px;
   }
   .container .navbar .cart {
     position: absolute;
-    right: 50px;
+    right: 60px;
   }
 }
 .container .navbar .avatar {
@@ -197,4 +200,19 @@ body {
 }
 .container .main .content-text {
   color: hsl(220, 14%, 75%);
+}
+.container .main .arrows {
+  position: absolute;
+  z-index: 2;
+  margin-top: 50%;
+  list-style: none;
+  display: inline-flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .arrows img {
+  background: hsl(0, 0%, 100%);
+  padding: 10px 13px;
+  border-radius: 100%;
 }

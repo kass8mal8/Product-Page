@@ -1,5 +1,4 @@
 import { IconButton, Stack, Typography } from "@mui/material";
-import { Add, Remove } from "@mui/icons-material"
 import { useContext } from "react";
 import { ProductContext } from "../App";
 
@@ -7,15 +6,14 @@ import plus from "../images/icon-plus.svg"
 import minus from "../images/icon-minus.svg"
 
 const Counter = () => {
-    const {count, setCount} = useContext(ProductContext)
-    // const { count, setCount } = context
-    console.log(count)
+    const {count, setCount, setIsClicked} = useContext(ProductContext)
 
     const handleSubtraction = () => {
         if(count < 1) return
         else {
             setCount(count - 1)
         }
+        if(count === 1) setIsClicked(false)
     }
 
     return (  

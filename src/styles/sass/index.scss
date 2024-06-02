@@ -25,13 +25,17 @@ body {
         @include responsive('mobile') {
             .topright {
                 margin-left: 60px;
+
+                .avatar {
+                    margin-left: 70px;
+                }
             }
             .badge {
-                margin-right: -55px;
+                margin-right: -47px;
             }
             .cart {
                 position: absolute;
-                right: 50px;
+                right: 60px;
             }
         }
 
@@ -221,6 +225,22 @@ body {
             color:$grayishblue;
         }
 
-        
+    .arrows {
+        position: absolute;
+        z-index: 2;
+        margin-top: 50%;
+        list-style: none;
+        display: inline-flex;
+        width: 95%;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            background: $white;
+            padding: 10px 13px;
+            border-radius: 100%;
+        }
+    }
+
     }
 }
