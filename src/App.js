@@ -1,10 +1,11 @@
-import { Box, createTheme, Modal, ThemeProvider } from "@mui/material";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import "./styles/css/index.css";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import Carousel from "./components/Carousel";
 import { createContext, useState } from "react";
-import Thumbnail from "./components/Thumbnail";
+import Thumbnail from "./components/thumbnail/Thumbnail";
+import Cart from "./components/Cart";
 
 export const ProductContext = createContext({})
 
@@ -18,19 +19,24 @@ const App = () => {
     const [image, setImage] = useState(null);
     const [isClicked, setIsClicked] = useState(false);
 
+    const [open, setOpen] = useState(true)
+    const handleClose = (e, reason) => {
+        if(reason === 'clickaway') return
+        setOpen(false)
+    }
+
     return (  
         <ProductContext.Provider value={{count, setCount, image, setImage, isClicked, setIsClicked}}>
             <ThemeProvider theme={theme}>
                 <Box className='container'>
                     <Navbar />
+                    <Cart />
 
                     <Box className="main">
                         <Carousel />
                         <Thumbnail />
-                        <Modal>
-                            <Thumbnail />
-                        </Modal>
                         <Content />
+                        {/* <Overlay /> */}
                     </Box>
                 </Box>
             </ThemeProvider>

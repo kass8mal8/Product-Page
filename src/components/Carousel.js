@@ -7,7 +7,7 @@ import next from '../images/icon-next.svg'
 import previous from '../images/icon-previous.svg'
 
 import { useState } from 'react'
-import Thumbnail from './Thumbnail'
+import Thumbnail from './thumbnail/Thumbnail'
 
 const Carousel = () => {
     const images = [
@@ -41,12 +41,12 @@ const Carousel = () => {
                             src={image.src} 
                             alt={image.alt} 
                             width={'100%'}
+                            height={'300px'}
                             // onClick = {handleModal} 
                         />
                     }
                 </Box>
             ))} 
-            {/* <Thumbnail images={images} /> */}
         </Box>
     );
 }

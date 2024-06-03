@@ -1,12 +1,13 @@
 import { IconButton, Stack, Typography } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProductContext } from "../App";
+import prodImage from "../images/image-product-1.jpg"
 
 import plus from "../images/icon-plus.svg"
 import minus from "../images/icon-minus.svg"
 
 const Counter = () => {
-    const {count, setCount, setIsClicked} = useContext(ProductContext)
+    const {count, setCount, setIsClicked, setImage} = useContext(ProductContext)
 
     const handleSubtraction = () => {
         if(count < 1) return
@@ -15,6 +16,10 @@ const Counter = () => {
         }
         if(count === 1) setIsClicked(false)
     }
+
+    useEffect(() => {
+        count >= 1 && setImage(prodImage)
+    }, [count]);
 
     return (  
         <Stack direction='row' spacing={2} alignItems={'center'} className="counter">

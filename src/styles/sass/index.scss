@@ -24,18 +24,14 @@ body {
 
         @include responsive('mobile') {
             .topright {
-                margin-left: 60px;
+                margin-left: 5.5em;
 
-                .avatar {
-                    margin-left: 70px;
+                .cart {
+                    margin-right: -1em;
                 }
             }
             .badge {
-                margin-right: -47px;
-            }
-            .cart {
-                position: absolute;
-                right: 60px;
+                margin-right: -3.2em;
             }
         }
 
@@ -45,7 +41,7 @@ body {
 
         .menu {
            margin-right: 20px;
-           margin-left: -20px;
+           margin-left: -15px;
         }
 
         .badge {
@@ -138,7 +134,7 @@ body {
         @include responsive('desktop') {
             display: flex;
             justify-content: space-between;
-            padding-inline: 80px;
+            padding-inline: 7em;
 
             img {
                 border-radius: 15px;
@@ -172,20 +168,9 @@ body {
 
         .cta {
             width: 95%;
+            margin-bottom: 10px;
             // padding-block: 30px;
 
-            .btn {
-                background: $orange;
-                color: $white;
-                box-shadow: none;
-                width: 100%;
-                border-radius: 10px;
-
-                @include responsive('mobile') {
-                    margin-top: 1em;
-                    padding-block: 15px;
-                }
-            }
 
             .counter {
                 background: $light-grayishblue;
@@ -204,7 +189,6 @@ body {
                     width: 70%;
                     padding-inline: 40px;
                     margin-left: 20px;
-                    text-transform: capitalize;
                 }
 
                 .counter {
@@ -225,22 +209,81 @@ body {
             color:$grayishblue;
         }
 
-    .arrows {
-        position: absolute;
-        z-index: 2;
-        margin-top: 50%;
-        list-style: none;
-        display: inline-flex;
-        width: 95%;
-        justify-content: space-between;
-        align-items: center;
+        .carousel {
+            .arrows {
+                position: absolute;
+                z-index: 2;
+                margin-top: 50%;
+                list-style: none;
+                display: inline-flex;
+                width: 95%;
+                justify-content: space-between;
+                align-items: center;
+    
+                img {
+                    background: $white;
+                    padding: 10px 13px;
+                    border-radius: 100%;
+                }
+            }
+        }
 
-        img {
-            background: $white;
-            padding: 10px 13px;
-            border-radius: 100%;
+    }
+    
+    .product-cart {
+        position: absolute;
+        top: 5em;
+        z-index: 3;
+        background: $white;
+        width: 90%;
+        border-radius: 10px;
+        height: 270px;
+
+        .row {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            margin-bottom: 1em;
+
+            .image {
+                width: 20%;
+                border-radius: .5em;
+            }
+        }
+
+        @include responsive('desktop') {
+            width: 30%;
+            right: 10px;
+        }
+
+        .cart-head{
+            padding: 1.5em 2em;
+        }
+
+        .cart-content {
+            padding: 15px 2em;
+        }
+
+        h6 {
+            font-weight: bold;
         }
     }
 
+    .btn {
+        background: $orange;
+        color: $white;
+        box-shadow: none;
+        width: 100%;
+        border-radius: 10px;
+        text-transform: capitalize;
+
+        &:hover {
+            background: $orange;
+        }
+
+        @include responsive('mobile') {
+            margin-top: 1em;
+            padding-block: 15px;
+        }
     }
 }

@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import Btn from "./Btn";
 import Counter from "./Counter";
+import cart from "../images/icon-cart.svg";
 
 const Content = () => {
     return (  
@@ -31,7 +32,7 @@ const Content = () => {
 
             <Box className="cta">
                 <Counter />
-                <Btn />
+                <Btn text={"add to cart"} icon={cart} />
             </Box>
         </Box>
     );
