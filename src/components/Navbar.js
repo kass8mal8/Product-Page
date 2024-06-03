@@ -8,7 +8,15 @@ import { ProductContext } from "../App";
 import menu from "../images/icon-menu.svg";
 
 const Navbar = () => {
-    const { count, isClicked } = useContext(ProductContext)
+    const { count, isClicked, setIsCart } = useContext(ProductContext)
+    const handleShowCart = () => {
+        if (isClicked) {
+            setIsCart(true);
+        }
+        else {
+            setIsCart(false);
+        }
+    }
     return (  
         <AppBar position="static" className="navbar">
             <Toolbar sx={{ alignItems: 'center' }}>
@@ -24,7 +32,7 @@ const Navbar = () => {
                 </ul>
 
                 <Stack direction='row' spacing={4} alignItems={'center'} className="topright">
-                    <img src={cart} alt='cart' width={25} height={25} className="cart" />
+                    <img src={cart} alt='cart' width={25} height={25} className="cart" onClick={handleShowCart} />
                     {isClicked && <Badge count={count} />}
                     <img src={avatar} alt='logo' className="avatar" />
                 </Stack>

@@ -41,7 +41,7 @@ const Carousel = () => {
                             src={image.src} 
                             alt={image.alt} 
                             width={'100%'}
-                            height={'300px'}
+                            height={'330px'}
                             // onClick = {handleModal} 
                         />
                     }

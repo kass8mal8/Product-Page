@@ -213,7 +213,7 @@ body {
             .arrows {
                 position: absolute;
                 z-index: 2;
-                margin-top: 50%;
+                margin-top: 35%;
                 list-style: none;
                 display: inline-flex;
                 width: 95%;
@@ -238,6 +238,9 @@ body {
         width: 90%;
         border-radius: 10px;
         height: 270px;
+        align-items: center;
+        display: none;
+        
 
         .row {
             display: flex;

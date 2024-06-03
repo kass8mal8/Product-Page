@@ -18,6 +18,7 @@ const App = () => {
     const [count, setCount] = useState(0);
     const [image, setImage] = useState(null);
     const [isClicked, setIsClicked] = useState(false);
+    const [isCart, setIsCart] = useState(false);
 
     const [open, setOpen] = useState(true)
     const handleClose = (e, reason) => {
@@ -26,7 +27,7 @@ const App = () => {
     }
 
     return (  
-        <ProductContext.Provider value={{count, setCount, image, setImage, isClicked, setIsClicked}}>
+        <ProductContext.Provider value={{count, setCount, image, setImage, isClicked, setIsClicked, setIsCart, isCart}}>
             <ThemeProvider theme={theme}>
                 <Box className='container'>
                     <Navbar />
