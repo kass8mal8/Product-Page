@@ -3,10 +3,8 @@ import { useContext } from "react";
 import { ProductContext } from "../App";
 
 const Btn = ({text, icon}) => {
-    const { setIsClicked, count, setImage } = useContext(ProductContext)
-    const handleAddToCart = () => {
-        setIsClicked(count > 0 && 'true')
-    }
+    const { setIsClicked, count } = useContext(ProductContext)
+    const handleAddToCart = () => { setIsClicked(count > 0 && 'true') }
 
     return (  
         <Button 

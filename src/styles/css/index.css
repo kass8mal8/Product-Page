@@ -252,3 +252,11 @@ body {
     padding-block: 15px;
   }
 }
+.container .box-overlay {
+  display: flex;
+  flex-flow: row;
+  width: 50%;
+}
+.container .box-overlay div {
+  width: 50%;
+}

@@ -19,7 +19,7 @@ const Counter = () => {
 
     useEffect(() => {
         count >= 1 && setImage(prodImage)
-    }, [count]);
+    }, [count, setImage]);
 
     return (  
         <Stack direction='row' spacing={2} alignItems={'center'} className="counter">

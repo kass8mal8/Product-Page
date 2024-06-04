@@ -290,4 +290,14 @@ body {
         }
     }
 
+    .box-overlay {
+        display: flex;
+        flex-flow: row;
+        width: 50%;
+
+        div {
+            width: 50%;
+        }
+    }
+
 }

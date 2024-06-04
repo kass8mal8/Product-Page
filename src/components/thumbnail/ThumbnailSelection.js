@@ -21,6 +21,9 @@ const ThumbnailSelection = ({thumbs, setSource, images}) => {
                         marginLeft: '40px',
                         border: imageId === thumb.id ? '3px solid hsl(26, 100%, 55%)' : 'none',
                         borderRadius: '17px',
+                        '&:after': {
+                            'transition': 'opacity .5s'
+                        }
                     }} 
                     key={thumb.id}
                 >

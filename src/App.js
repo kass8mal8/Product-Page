@@ -7,6 +7,7 @@ import { createContext, useState } from "react";
 import Thumbnail from "./components/thumbnail/Thumbnail";
 import Cart from "./components/Cart";
 import SideNav from "./components/SideNav";
+import LightBox from "./components/thumbnail/LightBox";
 
 export const ProductContext = createContext({})
 
@@ -22,6 +23,7 @@ const App = () => {
     const [isCart, setIsCart] = useState(false);
 
     const [open, setOpen] = useState(false)
+    const [isLightBox, setIsLightBox] = useState(false)
     const handleClose = (e, reason) => {
         if(reason === 'clickaway') return
         setOpen(false)
@@ -37,10 +39,10 @@ const App = () => {
 
                     <Box className="main">
                         <Carousel />
-                        <Thumbnail />
+                        <Thumbnail setIsLightBox={setIsLightBox}/>
                         <Content />
-                        {/* <Overlay /> */}
                     </Box>
+                    <LightBox open={isLightBox} setIsLightBox={setIsLightBox} />
                 </Box>
             </ThemeProvider>
         </ProductContext.Provider>

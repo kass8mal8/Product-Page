@@ -1,4 +1,4 @@
-import { Box, Drawer, IconButton, List, ListItem, Typography } from "@mui/material";
+import { Box, Drawer, IconButton, List, ListItem } from "@mui/material";
 import close from "../images/icon-close.svg"
 
 const SideNav = ({ open, handleClose, setOpen }) => {

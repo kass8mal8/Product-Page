@@ -9,14 +9,8 @@ import menu from "../images/icon-menu.svg";
 
 const Navbar = ({ setOpen }) => {
     const { count, isClicked, setIsCart } = useContext(ProductContext)
-    const handleShowCart = () => {
-        if (isClicked) {
-            setIsCart(true);
-        }
-        else {
-            setIsCart(false);
-        }
-    }
+    const handleShowCart = () => { isClicked ? setIsCart(true) : setIsCart(false) }
+    
     return (  
         <AppBar position="static" className="navbar">
             <Toolbar sx={{ alignItems: 'center' }}>

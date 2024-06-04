@@ -13,7 +13,7 @@ import { useState } from "react";
 import ThumbnailSelection from "./ThumbnailSelection";
 // import { ProductContext } from "../../App";
 
-const Thumbnail = () => {
+const Thumbnail = ({ setIsLightBox }) => {
     const images = [
         {src:img1, id:1, alt:'image-one'},
         {src:img2, id:2, alt:'image-two'},
@@ -37,7 +37,7 @@ const Thumbnail = () => {
     return (  
         <Grid container spacing={2} className="thumbnail">
             <Grid item sm={4}>
-                <Box sx={{ width: '29.3em'}}>
+                <Box sx={{ width: '29.3em'}} onClick={() => setIsLightBox(true)}>
                     <img src={source} alt="shoe" width={'100%'} height={400} />
                 </Box>
             </Grid>
