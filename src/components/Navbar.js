@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { ProductContext } from "../App";
 import menu from "../images/icon-menu.svg";
 
-const Navbar = () => {
+const Navbar = ({ setOpen }) => {
     const { count, isClicked, setIsCart } = useContext(ProductContext)
     const handleShowCart = () => {
         if (isClicked) {
@@ -20,7 +20,7 @@ const Navbar = () => {
     return (  
         <AppBar position="static" className="navbar">
             <Toolbar sx={{ alignItems: 'center' }}>
-                <img src={menu} alt="menu" className="menu" />
+                <img src={menu} alt="menu" className="menu" onClick={() => setOpen(true)} />
                 <img src={logo} alt='logo' className="logo"  />
 
                 <ul>
@@ -33,7 +33,7 @@ const Navbar = () => {
 
                 <Stack direction='row' spacing={4} alignItems={'center'} className="topright">
                     <img src={cart} alt='cart' width={25} height={25} className="cart" onClick={handleShowCart} />
-                    {isClicked && <Badge count={count} />}
+                    {(isClicked && count >= 1) && <Badge count={count} />}
                     <img src={avatar} alt='logo' className="avatar" />
                 </Stack>
             </Toolbar>
