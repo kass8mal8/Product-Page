@@ -1,24 +1,11 @@
 import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { ProductContext } from "../App";
-import { useContext, useRef, useEffect } from "react";
+import { useContext } from "react";
 import Btn from "./Btn";
 import delIcon from "../images/icon-delete.svg";
 
 const Cart = () => {
-    const { count, image, isCart, setCount, setIsCart } = useContext(ProductContext);
-    const cName = useRef(null)
-    // if(isCart) {
-    //     cName.style.display = 'block';
-    // }
-    // else {
-    //     cName.style.display = 'none';
-    // }
-
-    useEffect(() => {
-        if(cName.current) {
-            cName.current.style.display = isCart ? 'block' : 'none';
-        }
-    }, [isCart]);
+    const { count, image, setCount, setIsCart } = useContext(ProductContext);
 
     const handleClear = () => {
         setCount(0)
@@ -26,7 +13,7 @@ const Cart = () => {
     }
 
     return (  
-        <Box className="product-cart" ref={cName}>
+        <Box className="product-cart">
             <Box className='cart-head'> 
                 <Typography variant='h6'>Cart</Typography> 
             </Box>

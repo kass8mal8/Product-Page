@@ -12,6 +12,7 @@ const Btn = ({text, icon}) => {
             className="btn"
             variant='contained'
             onClick={handleAddToCart}
+            disableElevation
         > {text}
         </Button>
     );

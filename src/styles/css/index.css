@@ -57,14 +57,19 @@ body {
 }
 @media screen and (min-width: 426px) {
   .container .navbar {
-    padding-bottom: 15px;
-    margin-bottom: 10px;
+    padding-bottom: 13px;
+    margin-bottom: 15px;
     border-bottom: 1px solid hsl(219, 9%, 45%);
     display: block;
     padding-inline: 3em;
   }
   .container .navbar .avatar {
     width: 50px;
+    border-radius: 100%;
+  }
+  .container .navbar .avatar:hover {
+    cursor: pointer;
+    border: 2px solid hsl(26, 100%, 55%);
   }
   .container .navbar .menu {
     display: none;
@@ -85,7 +90,24 @@ body {
 }
 .container .navbar ul li {
   margin-right: 3rem;
+}
+.container .navbar ul li a {
   color: hsl(219, 9%, 45%);
+  text-decoration: none;
+  position: relative;
+}
+.container .navbar ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: hsl(26, 100%, 55%);
+  position: absolute;
+  left: 0;
+  bottom: -35px;
+  transition: 0.5s ease-in-out;
+}
+.container .navbar ul li a:hover::after {
+  width: 100%;
 }
 .container .main {
   position: absolute;
@@ -125,6 +147,9 @@ body {
   }
   .container .main img {
     border-radius: 15px;
+  }
+  .container .main img:hover {
+    cursor: pointer;
   }
   .container .main .carousel {
     display: none;
@@ -201,7 +226,7 @@ body {
 }
 .container .product-cart {
   position: absolute;
-  top: 5em;
+  top: 5.3em;
   z-index: 3;
   background: hsl(0, 0%, 100%);
   width: 90%;
@@ -209,6 +234,12 @@ body {
   height: 270px;
   align-items: center;
   display: none;
+  transition: all 0.5s ease-in-out;
+  transition-behavior: allow-discrete;
+}
+.container .product-cart[open] {
+  display: block;
+  box-shadow: 0 3px 5px 3px hsla(0, 0%, 0%, 0.3);
 }
 .container .product-cart .row {
   display: flex;
@@ -222,8 +253,16 @@ body {
 }
 @media screen and (min-width: 426px) {
   .container .product-cart {
-    width: 30%;
-    right: 10px;
+    width: 28%;
+    top: 4em;
+    right: 2.5em;
+    height: 250px;
+  }
+  .container .product-cart[open] {
+    box-shadow: 0 5px 20px -3px hsl(220, 14%, 75%);
+  }
+  .container .product-cart .btn {
+    padding-block: 13px;
   }
 }
 .container .product-cart .cart-head {
@@ -242,9 +281,13 @@ body {
   width: 100%;
   border-radius: 10px;
   text-transform: capitalize;
+  box-shadow: 0 5px 15px 0 hsl(25, 100%, 94%);
+  transition: 0.5s ease-in;
 }
 .container .btn:hover {
   background: hsl(26, 100%, 55%);
+  opacity: 0.6;
+  transition: 0.5s ease-in;
 }
 @media screen and (max-width: 425px) {
   .container .btn {

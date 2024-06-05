@@ -8,8 +8,14 @@ import { ProductContext } from "../App";
 import menu from "../images/icon-menu.svg";
 
 const Navbar = ({ setOpen }) => {
-    const { count, isClicked, setIsCart } = useContext(ProductContext)
-    const handleShowCart = () => { isClicked ? setIsCart(true) : setIsCart(false) }
+    const { count, isClicked } = useContext(ProductContext)
+    const handleShowCart = () => { 
+        // isClicked ? setIsCart(true) : setIsCart(false) 
+        const prodCart = document.querySelector('.product-cart')
+        if(prodCart) {
+            prodCart.toggleAttribute('open')
+        }
+    }
     
     return (  
         <AppBar position="static" className="navbar">
@@ -18,11 +24,11 @@ const Navbar = ({ setOpen }) => {
                 <img src={logo} alt='logo' className="logo"  />
 
                 <ul>
-                    <li>Collections</li>
-                    <li>Men</li>
-                    <li>Women</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li> <a href="/">Collections</a></li>
+                    <li> <a href="/">Men</a></li>
+                    <li> <a href="/">Women</a></li>
+                    <li> <a href="/">About</a></li>
+                    <li> <a href="/">Contact</a></li>
                 </ul>
 
                 <Stack direction='row' spacing={4} alignItems={'center'} className="topright">

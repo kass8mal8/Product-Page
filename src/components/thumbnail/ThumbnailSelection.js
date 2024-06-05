@@ -29,7 +29,10 @@ const ThumbnailSelection = ({thumbs, setSource, images}) => {
                 >
                     <img src={thumb.src} alt={thumb.alt} onClick={() => handleThumbnail(thumb.id)} 
                         style={{
-                            opacity: imageId === thumb.id ? 0.4 : 1  
+                            opacity: imageId === thumb.id ? 0.4 : 1,
+                            '&:hover': {
+                                'opacity': .4
+                            } 
                         }}
                     />
                 </Box>

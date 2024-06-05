@@ -58,14 +58,20 @@ body {
         }
 
         @include responsive('desktop') {
-            padding-bottom: 15px;
-            margin-bottom: 10px;
+            padding-bottom: 13px;
+            margin-bottom: 15px;
             border-bottom: 1px solid $dark-grayishblue;
             display: block;
             padding-inline: 3em;
 
             .avatar {
                 width: 50px;
+                border-radius: 100%;
+
+                &:hover {
+                    cursor: pointer;
+                    border: 2px solid $orange;
+                }
             }
 
             .menu {
@@ -81,6 +87,7 @@ body {
             display: inline-flex;
             flex: 1;
             list-style: none;
+            
 
             @include responsive('mobile') {
                 display: none;
@@ -88,7 +95,28 @@ body {
 
             li {
                 margin-right: 3rem;
-                color: $dark-grayishblue;
+                
+                a {
+                    color: $dark-grayishblue;
+                    text-decoration: none;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        background: $orange;
+                        position: absolute;
+                        left: 0;
+                        bottom: -35px;
+                        transition: .5s ease-in-out;
+                    }
+    
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+
             }
         }
     }
@@ -138,6 +166,11 @@ body {
 
             img {
                 border-radius: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                    // opacity: .5;
+                }
             }
 
             .carousel {
@@ -169,8 +202,6 @@ body {
         .cta {
             width: 95%;
             margin-bottom: 10px;
-            // padding-block: 30px;
-
 
             .counter {
                 background: $light-grayishblue;
@@ -232,7 +263,7 @@ body {
     
     .product-cart {
         position: absolute;
-        top: 5em;
+        top: 5.3em;
         z-index: 3;
         background: $white;
         width: 90%;
@@ -240,7 +271,13 @@ body {
         height: 270px;
         align-items: center;
         display: none;
+        transition: all .5s ease-in-out;
+        transition-behavior: allow-discrete;
         
+        &[open] {
+            display: block;
+            box-shadow: 0 3px 5px 3px hsla(0, 0%, 0%, .3);
+        }        
 
         .row {
             display: flex;
@@ -255,8 +292,18 @@ body {
         }
 
         @include responsive('desktop') {
-            width: 30%;
-            right: 10px;
+            width: 28%;
+            top: 4em;
+            right: 2.5em;
+            height: 250px;
+
+            &[open] {
+                box-shadow: 0 5px 20px -3px $grayishblue;
+            }
+
+            .btn {
+                padding-block: 13px;
+            }
         }
 
         .cart-head{
@@ -279,9 +326,13 @@ body {
         width: 100%;
         border-radius: 10px;
         text-transform: capitalize;
+        box-shadow: 0 5px 15px 0 $pale-orange;
+        transition: .5s ease-in;
 
         &:hover {
             background: $orange;
+            opacity: .6;
+            transition: .5s ease-in;
         }
 
         @include responsive('mobile') {
