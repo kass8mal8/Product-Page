@@ -224,6 +224,24 @@ body {
   padding: 10px 13px;
   border-radius: 100%;
 }
+@keyframes hidden {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .container .product-cart {
   position: absolute;
   top: 5.3em;
@@ -236,10 +254,12 @@ body {
   display: none;
   transition: all 0.5s ease-in-out;
   transition-behavior: allow-discrete;
+  animation: hidden 0.4s;
 }
 .container .product-cart[open] {
   display: block;
   box-shadow: 0 3px 5px 3px hsla(0, 0%, 0%, 0.3);
+  animation: appear 0.4s;
 }
 .container .product-cart .row {
   display: flex;
